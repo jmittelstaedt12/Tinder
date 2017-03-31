@@ -30,6 +30,14 @@ class CardsViewController: UIViewController {
         let location = sender.location(in: view)
         let velocity = sender.velocity(in: view)
         let translation = sender.translation(in: view)
+        let upOrLow: Bool!
+        
+        if location.y <= 284{
+            upOrLow = true
+        } else {
+            upOrLow = false
+        }
+        
         let xFromCenter = profileImageView.center.x - view.center.x
 
         if sender.state == .began {
@@ -38,7 +46,12 @@ class CardsViewController: UIViewController {
         } else if sender.state == .changed {
             print("Gesture is changing")
             profileImageView.center = CGPoint(x: pfImageOriginalCenter.x + translation.x, y: pfImageOriginalCenter.y)
+            if upOrLow == true{
             profileImageView.transform = CGAffineTransform(rotationAngle: xFromCenter/divisor)
+            }else{
+            profileImageView.transform = CGAffineTransform(rotationAngle: -1*(xFromCenter/divisor))
+
+            }
 
         } else if sender.state == .ended {
             print("Gesture ended")

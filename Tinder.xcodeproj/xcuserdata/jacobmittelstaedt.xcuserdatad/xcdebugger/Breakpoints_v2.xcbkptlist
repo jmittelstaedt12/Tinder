@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tinder/CardsViewController.swift"
-            timestampString = "512597992.80504"
+            timestampString = "512614395.692603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "didPanTray(_:)"
             landmarkType = "7">
          </BreakpointContent>
